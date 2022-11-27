@@ -1,7 +1,6 @@
 import { URL } from 'url';
 
 export default class LinkNormaliser {
-  // public urlRegex = /([^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,})/gi;
   private links: string[] = [];
 
   public normaliseUrls(links: string[]): string[] {

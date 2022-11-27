@@ -9,6 +9,6 @@ app.use(express.json());
 app.use(morgan('tiny'));
 app.use(bodyParser.text());
 
-app.use(router);
+app.use('/api', router);
 
 export default app;

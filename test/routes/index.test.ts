@@ -2,13 +2,13 @@ import request from 'supertest';
 import serverRoutes from '../../src/routes/routes'
 import app from '../../src/app'
 
-app.use("/", serverRoutes);
+app.use("/api", serverRoutes);
 
 describe("testing-server-routes", () => {
     describe('GET', () => {
-        describe('/', () => {
+        describe('/api/ping', () => {
             it("success", async () => {
-                const res = await request(app).get("/ping");
+                const res = await request(app).get("/api/ping");
                 expect(res.status).toEqual(200);
                 expect(res.body).toEqual({message: 'pong'});
             });
@@ -22,9 +22,9 @@ describe("testing-server-routes", () => {
     });
 
     describe('POST', () => {
-        describe('/', () => {
+        describe('/api/normalise', () => {
             const sendText = async (text: string) => {
-                return request(app).post("/").set({
+                return request(app).post("/api/normalise").set({
                     'Content-Type': 'text/plain',
                     Accept: '*/*',
                     'Cache-Control': 'no-cache',
