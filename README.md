@@ -16,9 +16,9 @@ In the assignment example from `src/public/url-scanner-assignment-v1.2.2.pdf`, t
 I decided to follow [RFC 3986](https://en.wikipedia.org/wiki/URI_normalization) convention and in this application, this is implemented.
 - In the assignment example, `http://` scheme is added for the links without it in the beginning of the link.
 In this application, a more secure extension scheme `https://` is added;
-- To distinguish between the file (e.g. `cat.png` and a website (e.g. `flickr.com`) a regex was used
+- To distinguish between a file (e.g. `cat.png` and a website (e.g. `flickr.com`), a regex was used
 with a finite set of file extension. However, this would not allow us to distinguish between a website
-`flickr.com` and a file `flickr.com`, since `.com` is also a valid file extension. 
+`flickr.com` and a file `flickr.com`, since `.com` is also a valid file extension. Hence, these rules would need to be optimized according to the business needs.
 
 ## Testing
 An application is tested with unit tests that verify multiple url cases. To run unit tests locally, run 
