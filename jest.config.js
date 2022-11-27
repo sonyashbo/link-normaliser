@@ -5,4 +5,5 @@ module.exports = {
   moduleNameMapper: {
     "@exmpl/(.*)": "<rootDir>/test/$1"
   },
+  testMatch: ["**/?(*.)+(spec|test).ts"],
 };
