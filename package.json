@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node build/src/index.js",
+    "start": "ts-node src/index.ts",
     "build": "tsc",
     "dev": "nodemon",
-    "test:unit": "ENV_FILE=./config/.env.test jest",
+    "test": "ENV_FILE=./config/.env.test jest",
     "lint": "./node_modules/eslint/bin/eslint.js  src --ext .ts",
     "fix-lint": "./node_modules/eslint/bin/eslint.js  src --ext .ts --fix"
   },
