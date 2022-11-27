@@ -8,12 +8,10 @@ describe('linkService', () => {
             'there. After that share their links at https://www.facebook.com/ and http://🍕.ws';
         const result = service.getLinks(rawText);
         expect(result).toEqual([
-            "https://www.flickr.com,/",
-            "https://500px.com,/",
+            "https://www.flickr.com/",
+            "https://500px.com/",
             "https://www.freeimagehosting.net/",
-            "https://postimage.io,/",
-            "https://picture.dog.png/",
-            "https://picture.cat.jpeg,/",
+            "https://postimage.io/",
             "https://www.facebook.com/",
             "http://xn--vi8h.ws/"
         ]);

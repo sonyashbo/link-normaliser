@@ -40,12 +40,10 @@ describe("testing-server-routes", () => {
                 const res = await sendText(text);
                 expect(res.status).toEqual(200);
                 expect(res.body).toEqual([
-                    "https://www.flickr.com,/",
-                    "https://500px.com,/",
+                    "https://www.flickr.com/",
+                    "https://500px.com/",
                     "https://www.freeimagehosting.net/",
-                    "https://postimage.io,/",
-                    "https://picture.dog.png/",
-                    "https://picture.cat.jpeg,/",
+                    "https://postimage.io/",
                     "https://www.facebook.com/",
                     "http://xn--vi8h.ws/"
                 ]);
